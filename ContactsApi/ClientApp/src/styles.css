@@ -1,0 +1,8 @@
+@import "~ngx-toastr/toastr.css";
+
+input.ng-touched.ng-invalid {
+  border-color: crimson;
+}
+input.ng-valid {
+  border-color: green;
+}

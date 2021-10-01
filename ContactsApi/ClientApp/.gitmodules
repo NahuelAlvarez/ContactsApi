@@ -1,0 +1,3 @@
+[submodule "ContactsWebApiProject"]
+	path = ContactsWebApiProject
+	url = https://github.com/NahuelAlvarez/ContactsWebApiProject.git

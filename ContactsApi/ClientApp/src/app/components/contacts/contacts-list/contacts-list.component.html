@@ -1,0 +1,30 @@
+<table class="table table-hover table-sm">
+    <caption></caption>
+    <thead>
+        <tr>           
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Company</th>
+            <th scope="col">Email</th>
+            <th scope="col">PhoneNumber</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of pageOfItems">           
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td>{{item.company}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.phoneNumber}}</td>
+            <td>
+                <i class="far fa-edit fa-lg text-info" (click)="editContact(item)" style="cursor:pointer;"></i>
+            </td>
+            <td>
+                <i class="far fa-trash-alt fa-lg text-danger" (click)="deleteContact(item.id)" style="cursor:pointer;"></i>
+            </td>
+        </tr>
+    </tbody>    
+</table>
+<div class="row justify-content-center">
+    <jw-pagination [items]=contactService.list (changePage)="onChangePage($event)"></jw-pagination>
+</div>
